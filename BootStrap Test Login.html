@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+    <script src="/__/firebase/7.8.2/firebase-auth.js"></script>
+    </style>
+    <!--This is the link for bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div id="login_div" class="main-div">
+      <!--You create a row and then can specify how many columns and what size they are-->
+      <div class = "row">
+      <div class = "col" align= "center"> <h2> Bar Crawl </h2></div>
+    </div>
+    <div class = "row">
+      <div class = "col" align= "center"> <input type="email" placeholder="Email..." id="email_field" /> </div>
+      </div>
+      <div class = "col" align= "center">
+        <input type="password" placeholder="Password..." id="password_field" />
+      </div>
+      <div class ="row">
+        <div class = "col" align= "center"> 
+          <button onclick="login()">Login to Account</button> 
+         <button onclick="create()">Create Account</button> 
+        </div>
+      </div>
+    </div>
+  
+    <div id="user_div" class="loggedin-div">
+      <div class = "row"></div>
+        <div class = "col" align= "center"><h3>Welcome User</h3>
+      <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+      <button onclick="logout()">Logout</button></div>
+    </div>
+  
+  
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD8ZCj_XELhhgyUcLmAXgBZq8qLARALhXg",
+        authDomain: "cloud-systems-integration.firebaseapp.com",
+        databaseURL: "https://cloud-systems-integration.firebaseio.com",
+        projectId: "cloud-systems-integration",
+        storageBucket: "cloud-systems-integration.appspot.com",
+        messagingSenderId: "290745660448",
+        appId: "1:290745660448:web:9c8fe2d1427da93f853845",
+        measurementId: "G-984N5V2Z4V"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+    </script>
+  
+
+    <script src="index.js"></script>
+  
+
+
+  </body>
+</html>

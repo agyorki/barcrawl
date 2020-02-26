@@ -1,0 +1,27 @@
+//okay so here's the colors used:
+
+//button color
+class="btn grey waves-effect waves-dark lighten-4"
+
+//teal accent (for arrows and stuff)
+teal-text
+
+//other text/icon colors probably obvious idk man
+white-text
+black-text
+
+//nav header color (dark teal header)
+class="nav-wrapper teal darken-4"
+
+//text shadow
+style="text-shadow: 2px 2px 4px #000000;"
+
+//mobile menu color 
+class="sidenav teal darken-3"
+
+//icon circle colors
+class="material-icons circle grey lighten-1 black-text"
+
+//login and signup button colors
+class="btn waves-effect waves-dark teal darken-2 white-text"
+class="btn waves-effect waves-dark grey darken-1 white-text"

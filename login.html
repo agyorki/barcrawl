@@ -13,13 +13,13 @@
 
 </style>
 </head>
-<body class="grey lighten-3">
+<body class="grey darken-3">
 
   <!-- Navigation Bar -->
   <header>
-    <nav class="nav-wrapper grey lighten-4">
+    <nav class="nav-wrapper teal darken-4">
       <div class="container">
-        <a href="#" class="brand-logo black-text">Bar Crawl</a>
+        <a href="#" class="brand-logo white-text"style="text-shadow: 2px 2px 4px #000000;">Bar Crawl</a>
       </div>
    </nav>
   </header>
@@ -28,26 +28,26 @@
 
   <div class="row" id="login_form">
         <div class="col s12 m4 offset-m4" style="margin-top: 40px;">
-            <h6 style="text-align:center;">Welcome to Bar Crawl</h6>
+            <h6 style="text-align:center; text-shadow: 2px 2px 4px #000000;" class = "white-text">Welcome to Bar Crawl</h6>
             <div class="card">
                 <div class="card-content">
                     <div class="form-field">
-                        <label for="email">Email</label>
+                        <label for="email" class="teal-text">Email</label>
                         <input type="email" id="login_email">
                     </div><br>
                     <div class="form-field">
-                        <label for="password">Password</label>
+                        <label for="password" class="teal-text">Password</label>
                         <input type="password" id="login_password">
                     </div><br>
                     <div class="center">
-                    <a href="#" onclick="login()" class="btn waves-effect waves-dark grey lighten-4 black-text" style="width: 49%;">Log In</a>
-                    <a href="#" onclick="signupform()" class="btn waves-effect waves-dark grey lighten-4 black-text" style="width: 49%;">Sign Up</a><br><br>
-                    <a href="#" onclick="forgotform()">Forgot Password?</a>
+                    <a href="#" onclick="login()" class="btn waves-effect waves-dark teal darken-2 white-text" style="width: 49%;">Log In</a>
+                    <a href="#" onclick="signupform()" class="btn waves-effect waves-dark grey darken-1 white-text" style="width: 49%;">Sign Up</a><br><br>
+                    <a href="#" onclick="forgotform()"class = "teal-text" >Forgot Password?</a>
                     </div>
                 </div>
 
 
-
+                
             </div>
 
         </div>
@@ -81,8 +81,8 @@
                  <input type="password" id="signup_verifypassword"> 
                </div><br>
                  <div class="center">
-                  <a href="#"  class="btn waves-effect waves-dark grey lighten-4 black-text" style="width: 49%;">Submit</a>
-                  <a href="#" onclick="cancel()" class="btn waves-effect waves-dark grey lighten-4 black-text" style="width: 49%;">Cancel</a>
+                  <button id ="submitButton" onclick="submitUserInformation()" class="btn waves-effect waves-dark teal darken-2 white-text" style="width: 49%;">Submit</button>
+                  <a href="#" onclick="cancel()" class="btn waves-effect waves-dark grey darken-1 white-text" style="width: 49%;">Cancel</a>
                   </div>
                 </div>
               </div>
@@ -127,17 +127,32 @@
 
   <script>
     // Your web app's Firebase configuration
-    var firebaseConfig = {
-    apiKey: "AIzaSyD3aC0GmdmyY_h1A9Q7E4vLGTJ-q3W1jjU",
-    authDomain: "fir-test-95f59.firebaseapp.com",
-    databaseURL: "https://fir-test-95f59.firebaseio.com",
-    projectId: "fir-test-95f59",
-    storageBucket: "fir-test-95f59.appspot.com",
-    messagingSenderId: "104452736386",
-    appId: "1:104452736386:web:08c49c96f58f9d48a47b9b"
-   };
+   // var firebaseConfig = {
+    //apiKey: "AIzaSyD3aC0GmdmyY_h1A9Q7E4vLGTJ-q3W1jjU",
+    //authDomain: "fir-test-95f59.firebaseapp.com",
+    //databaseURL: "https://fir-test-95f59.firebaseio.com",
+    //projectId: "fir-test-95f59",
+    //storageBucket: "fir-test-95f59.appspot.com",
+    //messagingSenderId: "104452736386",
+    //appId: "1:104452736386:web:08c49c96f58f9d48a47b9b"
+   //};
+   const firebaseConfig = {
+        apiKey: "AIzaSyAIurSMndppM-r_X09TjmlX8_i-tjV8sV0",
+        authDomain: "barcrawl-e5844.firebaseapp.com",
+        databaseURL: "https://barcrawl-e5844.firebaseio.com",
+        projectId: "barcrawl-e5844",
+        storageBucket: "barcrawl-e5844.appspot.com",
+        messagingSenderId: "729238087578",
+        appId: "1:729238087578:web:30f08c0aca559f56b2fc23",
+        measurementId: "G-NFY0Y1NSK0"
+    };
     // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
+   //create database object
+   const fsdb = firebase.firestore();
+   //admin stuff
+   
+   var defaultApp = admin.initializeApp(defaultAppConfig);
   </script>
 
     <!-- Compiled and minified JavaScript -->

@@ -1,0 +1,281 @@
+<html lang="en">
+
+
+<head>
+
+
+  <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <!-- Import Google Icon Font-->
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- Compiled and minified CSS -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+  <title>Bar Crawl</title>
+
+
+
+
+
+</head>
+
+
+<body class="grey darken-3">
+
+
+
+
+
+  <!-- Navigation Bar -->
+
+
+  <header>
+
+
+    <nav class="nav-wrapper teal darken-4">
+
+
+      <div class="container">
+
+
+        <a href="index.html" class="brand-logo white-text" style="text-shadow: 2px 2px 4px #000000;">Bar Crawl</a>
+
+
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+
+
+          <i class="material-icons white-text">menu</i>
+
+
+        </a>
+
+
+        <ul class="right hide-on-med-and-down">
+
+
+          <li class="logged-in"><a href="#" class="white-text" id="account" style="text-shadow: 2px 2px 4px #000000;">Account</a></li>
+
+
+          <li class="logged-in"><a href="#" class="white-text" id="order-history" style="text-shadow: 2px 2px 4px #000000;">Order History</a></li>
+
+
+          <li class="logged-in"><a href="#" class="white-text" id="payment"style="text-shadow: 2px 2px 4px #000000;">Payment Options</a></li>
+
+
+          <li class="logged-in"><a href="#" class="white-text" id="promotions"style="text-shadow: 2px 2px 4px #000000;">Promotions</a></li>
+
+
+          <li class="logged-in"><a href="#" onclick="logout()" class="white-text" id="logout"style="text-shadow: 2px 2px 4px #000000;">Logout</a></li>
+
+
+        </ul>
+
+
+        <ul class="sidenav teal darken-3" id="mobile-menu">
+
+
+          <li><a href="#" class="white-text" style="text-shadow: 2px 2px 4px #000000;">Account<i class="material-icons prefix white-text">perm_identity</i></a> </li>
+
+
+          <li><a href="#" class="white-text" style="text-shadow: 2px 2px 4px #000000;">Order History<i class="material-icons prefix white-text">history</i></a> </li>
+
+
+          <li><a href="#" class="white-text" style="text-shadow: 2px 2px 4px #000000;">Payment Options<i class="material-icons prefix white-text">payment</i></a> </li>
+
+
+          <li><a href="#" class="white-text" style="text-shadow: 2px 2px 4px #000000;">Promotions<i class="material-icons prefix white-text">loyalty</i></a> </li>
+
+
+          <li><a href="#" class="white-text" style="text-shadow: 2px 2px 4px #000000;" onclick="logout()">Logout<i class="material-icons prefix white-text">cancel</i></a> </li>
+
+
+        </ul>
+
+
+      </div>
+
+
+   </nav>
+
+
+  </header>
+
+  <!-- HELP -->
+
+
+  <div class="container" style="margin-top: 40px;">
+
+
+    <span class="white-text"style="text-shadow: 2px 2px 4px #000000;">
+      
+      <h4>Help</h4>
+
+      <br>
+
+      <h6>Contact Us</h6>
+
+    </span>
+
+      <ul class="collection">
+          <li class="collection-item avatar">
+          <p class="black-text">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; barcrawl@support.com</p>
+          <br>
+          <p class="black-text">Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (440) 321-8923</p>
+          <br>
+          <p class="black-text">Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://barcrawl.com/help</p>
+          </li>
+      </ul>
+      
+    
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+
+  // Your web app's Firebase configuration
+
+
+    //var firebaseConfig = {
+
+
+    //apiKey: "AIzaSyD3aC0GmdmyY_h1A9Q7E4vLGTJ-q3W1jjU",
+
+
+    //authDomain: "fir-test-95f59.firebaseapp.com",
+
+
+    //databaseURL: "https://fir-test-95f59.firebaseio.com",
+
+
+    //projectId: "fir-test-95f59",
+
+
+    //storageBucket: "fir-test-95f59.appspot.com",
+
+
+    //messagingSenderId: "104452736386",
+
+
+    //appId: "1:104452736386:web:08c49c96f58f9d48a47b9b"
+
+
+    var firebaseConfig = {
+
+
+    apiKey: "AIzaSyCMmPrmGi08E-kPPuh6IIHTzbjaxqesFyg",
+
+
+    authDomain: "barcrawl-test.firebaseapp.com",
+
+
+    databaseURL: "https://barcrawl-test.firebaseio.com",
+
+
+    projectId: "barcrawl-test",
+
+
+    storageBucket: "barcrawl-test.appspot.com",
+
+
+    messagingSenderId: "662522965901",
+
+
+    appId: "1:662522965901:web:d6a1557f66ec89c25f57c4",
+
+
+    measurementId: "G-9DTDGRWL1R"
+
+
+  };
+
+
+
+
+
+  // Initialize Firebase
+
+
+  firebase.initializeApp(firebaseConfig);
+
+
+</script>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+
+  <script>
+
+
+    $(document).ready(function(){
+
+
+      $('.sidenav').sidenav();
+
+
+    });
+
+
+  </script>
+
+
+
+
+
+  <script src="auth.js"></script>
+
+
+  <script src="index.js"></script>
+
+
+</body>
+
+
+</html>
